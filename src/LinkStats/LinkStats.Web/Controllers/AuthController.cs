@@ -2,12 +2,22 @@
 
 namespace LinkStats.Web.Controllers
 {
-	public class AuthController : Controller
+	[Route("{controller}/{action}")]
+	public class AuthController : BaseController
 	{
-		[Route("/Auth/SignUp")]
+		[HttpGet]
 		public IActionResult SignUp()
 		{
 			return View();
 		}
+
+
+		[HttpPost]
+		public IActionResult SignUp(string Name, string Email, string Password)
+		{
+			return RedirectToAction("Index", "Home");
+		}
+
+
 	}
 }

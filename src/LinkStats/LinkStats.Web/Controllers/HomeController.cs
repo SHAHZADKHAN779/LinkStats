@@ -2,7 +2,8 @@
 
 namespace LinkStats.Web.Controllers
 {
-	public class HomeController : Controller
+	[Route("{controller}/{action}")]
+	public class HomeController : BaseController
 	{
 		[Route("/")]
 		public IActionResult Index()
@@ -16,7 +17,6 @@ namespace LinkStats.Web.Controllers
 			return View();
 		}
 
-		[Route("/Home/ContactUs")]
 		public IActionResult ContactUs()
 		{
 			return View();
