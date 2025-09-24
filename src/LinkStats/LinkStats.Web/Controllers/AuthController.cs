@@ -4,8 +4,8 @@ namespace LinkStats.Web.Controllers
 {
 	public class AuthController : Controller
 	{
-		[Route("/Auth/")]
-		public IActionResult Index()
+		[Route("/Auth/SignUp")]
+		public IActionResult SignUp()
 		{
 			return View();
 		}
